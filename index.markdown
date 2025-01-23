@@ -14,7 +14,7 @@ Welcome to the COMP361 (Theory of Computation) Course Page. For course policies,
 ### Resources
 
 #### Textbook
-We will be using Sipser's *Introduction to the Theory of Computation*, 3rd edition. 
+We will be using Sipser's [*Introduction to the Theory of Computation*](https://macalester.on.worldcat.org/search/detail/761858892?queryString=introduction%20to%20the%20theory%20of%20computation), 3rd edition. 
 
 Be aware of [known typos](https://math.mit.edu/~sipser/itoc-errs3.1.html) in the book as you read.
 
@@ -52,9 +52,9 @@ All homework assignments will be posted here, but are to be submitted on the Moo
 
 Note that while you are expected to complete *all* homework problems, some assignments may only have a subset of problems that will be graded for accuracy. These problems will be indicated in the instructions, if in a PDF, or by bolding if the problems are listed here. 
 
-##### Homework 0
+#### Homework 0
 
-Sipser Problems: 0.4, 0.5, 0.11, *0.12*, *0.13*, 0.14
+Sipser Problems: 0.4, 0.5, 0.11, **0.12**, **0.13**, 0.14
 
 Bolded questions will be graded for correctness and clarity. I recommend struggling with 0.14 for at least a day or two before consulting the provided solution. 
 
