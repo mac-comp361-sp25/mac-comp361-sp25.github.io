@@ -19,7 +19,11 @@ We will be using Sipser's [*Introduction to the Theory of Computation*](https://
 Be aware of [known typos](https://math.mit.edu/~sipser/itoc-errs3.1.html) in the book as you read.
 
 #### Office Hours
-**TBD**: My office hours will be determined from the responses on the beginning of course survey!
+MON 4:30-6pm \\
+FRI 4:30-5:30pm \\
+OLRI 229
+
+If you cannot make these times, please feel free to set up an appointment via email. 
 
 ### Schedule
 The schedule below will be updated to keep track of all released course materials. Keep in mind that I may shift planned topics to adjust pace as necessary. 
@@ -59,7 +63,7 @@ Sipser Problems: 0.4 ($|AxB|$), 0.5 (size of the power set of $A$), 0.11 ($C(n) 
 Bolded questions will be graded for correctness and clarity. I recommend struggling with 0.14 for at least a day or two before consulting the provided solution. 
 
 **Out:** Jan 23rd.
-**Due:** 5pm, Jan 31st. 
+**Due:** 11:59pm, Jan 31st. 
 
 **NOTEs:** This assignment will hopefully mostly *review* of material from (primarily) Discrete Mathematics, as well as some moderate extensions of things you should already know to fit the context of this course. 
 **Be aware that things you do already know might look a bit unfamiliar at first!** This is an opportunity to familiarize yourself with my style of presentation without having to worry about being unfamiliar with the material!
