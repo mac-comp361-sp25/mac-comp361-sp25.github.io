@@ -58,7 +58,7 @@ Note that while you are expected to complete *all* homework problems, some assig
 
 #### Homework 0
 
-Sipser Problems: 0.4 ($|AxB|$), 0.5 (size of the power set of $A$), 0.11 ($C(n) = \sum^n i^2$), **0.12** (All horses are the same color), **0.13** (Every graph w/ 2+ nodes has 2 nodes with equal degree), 0.14 (Ramsey's Thm.)
+Sipser Problems: 0.4 ($AxB$), 0.5 (size of the power set of $A$), 0.11 ($C(n) = \sum^n i^2$), **0.12** (All horses are the same color), **0.13** (Every graph w/ 2+ nodes has 2 nodes with equal degree), 0.14 (Ramsey's Thm.)
 
 Bolded questions will be graded for correctness and clarity. I recommend struggling with 0.14 for at least a day or two before consulting the provided solution. 
 
