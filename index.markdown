@@ -33,7 +33,7 @@ The schedule below will be updated to keep track of all released course material
 | Week | Date | Topic | Reading | Materials |
 | :-: | :- | :- | -: | :- |
 | 0 | TH 1/23 | Course Overview | NA | [Beginning-of-Semester Survey](https://docs.google.com/forms/d/e/1FAIpQLSf7JXf7EJV5f2xBCxAVzrakrg0U0auda68xrEPp1hy7pMcPoA/viewform?usp=sharing) |
-| 1 | TU 1/28 | Mathematical Foundations  | Sipser 0  |  |
+| 1 | TU 1/28 | Mathematical Foundations  | Sipser 0  | [Proof Guide](Proof Writing Style Guide)  |
 | 1 | TH 1/30 | DFAs  | Sipser 1.1  |  |
 | 2 | TU 2/4 | Proving Regularity  |  |  |
 | 2 | TH 2/6 | Closure Properties of Regular Languages  |  |  |
@@ -58,14 +58,15 @@ Note that while you are expected to complete *all* homework problems, some assig
 
 #### Homework 0
 
-Sipser Problems: 0.4 ($AxB$), 0.5 (size of the power set of $A$), 0.11 ($C(n) = \sum^n i^2$), **0.12** (All horses are the same color), **0.13** (Every graph w/ 2+ nodes has 2 nodes with equal degree), 0.14 (Ramsey's Thm.)
+Sipser Problems: 0.4 ($AxB$), 0.5 (size of the power set of $A$), 0.11 ($C(n) = \sum^n i^3$), **0.12** (All horses are the same color), **0.13** (Every graph w/ 2+ nodes has 2 nodes with equal degree), 0.14 (Ramsey's Thm.)
 
 Bolded questions will be graded for correctness and clarity. I recommend struggling with 0.14 for at least a day or two before consulting the provided solution. 
 
 **Out:** Jan 23rd.
 **Due:** 11:59pm, Jan 31st. 
+**Template:** [LaTeX]({{site.url}}/hws/HW0_Template.tex)
 
 **NOTEs:** This assignment will hopefully mostly *review* of material from (primarily) Discrete Mathematics, as well as some moderate extensions of things you should already know to fit the context of this course. 
 **Be aware that things you do already know might look a bit unfamiliar at first!** This is an opportunity to familiarize yourself with my style of presentation without having to worry about being unfamiliar with the material!
 
-**WARNING**: Apparently problem numbers are shuffled between editions. A short description has been added so you solve the right problems
+**WARNING**: Apparently problem numbers are shuffled between editions. A short description has been added so you solve the right problems.
