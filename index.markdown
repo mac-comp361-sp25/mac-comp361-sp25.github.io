@@ -34,7 +34,7 @@ The schedule below will be updated to keep track of all released course material
 | :-: | :- | :- | -: | :- |
 | 0 | TH 1/23 | Course Overview | NA | [Beginning-of-Semester Survey](https://docs.google.com/forms/d/e/1FAIpQLSf7JXf7EJV5f2xBCxAVzrakrg0U0auda68xrEPp1hy7pMcPoA/viewform?usp=sharing) |
 | 1 | TU 1/28 | Mathematical Foundations  | Sipser 0  | [Proof Guide]({{site.url}}/notes/ProofGuide.pdf)  |
-| 1 | TH 1/30 | DFAs  | Sipser 1.1  |  |
+| 1 | TH 1/30 | DFAs  | Sipser 1.1  | [Induction for DFAs]({{site.url}}/notes/InductionDFAs.pdf)  |
 | 2 | TU 2/4 | Proving Regularity  |  |  |
 | 2 | TH 2/6 | Closure Properties of Regular Languages  |  |  |
 | 3 | TU 2/11 | NFAs  | Sipser 1.2  |  |
