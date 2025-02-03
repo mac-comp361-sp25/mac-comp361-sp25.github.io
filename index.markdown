@@ -66,7 +66,16 @@ Bolded questions will be graded for correctness and clarity. I recommend struggl
 **Due:** 11:59pm, Jan 31st. 
 **Template:** [LaTeX]({{site.url}}/hws/HW0_Template.tex)
 
-**NOTEs:** This assignment will hopefully mostly *review* of material from (primarily) Discrete Mathematics, as well as some moderate extensions of things you should already know to fit the context of this course. 
+**NOTES:** This assignment will hopefully mostly *review* of material from (primarily) Discrete Mathematics, as well as some moderate extensions of things you should already know to fit the context of this course. 
 **Be aware that things you do already know might look a bit unfamiliar at first!** This is an opportunity to familiarize yourself with my style of presentation without having to worry about being unfamiliar with the material!
 
 **WARNING**: Apparently problem numbers are shuffled between editions. A short description has been added so you solve the right problems.
+
+#### Homework 1
+
+**Out:** Feb 3rd.
+**Due:** 11:59pm, Feb 9th.
+[**Instructions**]({{site.url}}/hws/HW1.tex)
+**Template**: [LaTeX]({{site.url}}/hws/HW1.tex)
+
+**NOTES:** Problem 2 is a good example of the kind of presentation/support I'd provide for a problem that requires you to prove a DFA accepts a particular language. 2b is a good example of a place where using induction to do so may be helpful. 
