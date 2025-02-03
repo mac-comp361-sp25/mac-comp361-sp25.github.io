@@ -74,8 +74,8 @@ Bolded questions will be graded for correctness and clarity. I recommend struggl
 #### Homework 1
 
 **Out:** Feb 3rd.
-**Due:** 11:59pm, Feb 9th.
-[**Instructions**]({{site.url}}/hws/HW1.tex)
+**Due:** 11:59pm, Feb 9th. \\
+[**Instructions**]({{site.url}}/hws/HW1.pdf)
 **Template**: [LaTeX]({{site.url}}/hws/HW1.tex)
 
 **NOTES:** Problem 2 is a good example of the kind of presentation/support I'd provide for a problem that requires you to prove a DFA accepts a particular language. 2b is a good example of a place where using induction to do so may be helpful. 
