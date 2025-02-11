@@ -79,3 +79,12 @@ Bolded questions will be graded for correctness and clarity. I recommend struggl
 **Template**: [LaTeX]({{site.url}}/hws/HW1.tex)
 
 **NOTES:** Problem 2 is a good example of the kind of presentation/support I'd provide for a problem that requires you to prove a DFA accepts a particular language. 2b is a good example of a place where using induction to do so may be helpful. 
+
+#### Homework 2
+
+**OUT:** Feb 10th.
+**DUE:** 11:59pm, Feb 17th. \\
+[**Instructions**]({{site.url}}/hws/HW2.pdf)
+**Template**: [LaTeX]({{site.url}}/hws/HW2.tex)
+
+**Notes:** Be aware that while 2b is not graded, a reasonable solution to 2b is necessary to get full points on 2c, so it is ungraded but effectively mandatory.

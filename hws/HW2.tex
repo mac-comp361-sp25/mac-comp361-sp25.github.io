@@ -1,0 +1,88 @@
+\documentclass{exam}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{geometry}[border=1in]
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,automata,positioning}
+
+\newtheorem*{statement}{Statement}
+
+\title{HW1 - Closure Properties of Regular Languages and NFAs}
+\author{COMP361 --- Suhas Arehalli}
+\date{Spring 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Instructions}
+As with previous homeworks, 
+
+\begin{itemize}
+    \item Deadlines are posted on the course website.
+    \item Solutions should be turned in as a typeset pdf, preferably using LaTeX. I recommend a tool like Overleaf. 
+    \item Assignments are individual, and you should not share solutions with other students. However, you are free to discuss problems within the bounds of the academic integrity policy in the syllabus, and should indicate in your assignment the people you got assistance from (including instructors, peers, and preceptors!). 
+    \item Proofread your work before submission, and consult the proof style guide to make sure your submissions are both correct and clear.
+    \item Graded problems will be indicated by an asterisk (*) next to the problem number. You are still expected to solve all of the problems.
+\end{itemize}
+
+\section*{Questions}
+\begin{questions}
+    \question \textit{(Sipser 1.31/32/36)} \label{prob:regular}
+    \begin{parts}
+        \part For languages $A$ and $B$, let the \textit{perfect shuffle} of $A$ and $B$ be the language 
+        \begin{align*}
+            L_1 = \{w \in \Sigma^* \mid w = a_1b_1\dots a_kb_k \text{ where } a_1\dots a_k \in A \text{ and } b_1 \dots b_k \in B, \text{ each } a_i, b_i \in \Sigma\}
+        \end{align*}
+        Show the regular languages are closed under the perfect shuffle operation.
+
+        \part *For languages $A$ and $B$, let the \textit{shuffle} of $A$ and $B$ be the language 
+        \begin{align*}
+            L_1 = \{w \in \Sigma^* \mid w = a_1b_1\dots a_kb_k \text{ where } a_1\dots a_k \in A \text{ and } b_1 \dots b_k \in B, \text{ each } a_i, b_i \in \Sigma^*\}
+        \end{align*}
+        Note the difference with a perfect shuffle --- each $a_i, b_i$ is a string, not a symbol! 
+
+        Show that the regular languages are closed under the shuffle operation.
+
+        \part For a language $L$, let the \textit{reverse} of $L$ be
+        \begin{align*}
+            L^R = \{w^R \mid w \in L\}
+        \end{align*}
+        Recall that for $w = w_1\dots w_k$, $w^R = w_k \dots w_1$, $w_i \in \Sigma, \forall 1\leq i \leq k$. Show that the regular languages are closed under the reverse operation. \label{part:reverse}
+    \end{parts}
+
+    \question \textit{(Extending Sipser 1.25/1.37)} Let
+    \begin{align*}
+        \Sigma_3 = \left\{ \begin{bmatrix}
+           a \\ b \\c
+         \end{bmatrix}\ \mid a,b,c \in \{0, 1\} \right\}
+    \end{align*}
+    and 
+    \begin{align*}
+        B = \{ w \in \Sigma_3 \mid \text{ the bottom row of $w$ is the sum of the top two rows}
+    \end{align*}
+    That is, you should consider the sequence of first, second, and third elements of each column vector as binary strings, and the binary string constructed from the third elements should represent the sum of the binary strings represented by the first and section. See the example in Sipser to confirm your understanding.
+
+    \begin{parts}
+        \part *Prove that $B^R$ is regular. Conclude from problem \ref{prob:regular}\ref{part:reverse} that $B$ must be regular.
+        
+        \textit{**HINT**: Consider how you'd add binary strings, and modify that technique to verify that the third row contains the correct digit in that position. How much state/memory do you need to maintain?}
+
+        \part Read the informal definition of a \textbf{Finite State Transducer (FST)} in Sipser 1.24. Construct a formal definition of an FST as a 5-tuple and a formal definition of a computation in an FST, following the definitions of a DFA we saw earlier. Assume the input and output alphabets can be distinct (labeled $\Sigma$ and $\Gamma$), and there are no accept/final states. 
+
+        \textit{**HINT**:} Following Sipser, the transition function should be of the form $\delta: Q \times \Sigma \to Q \times \Gamma$
+
+        \part *Using the previous parts, construct a reverse binary addition FST. Define an appropriate input alphabet $\Sigma_2$ than encodes two binary strings $a$ and $b$ of any arbitrary finite length $n$, and have the transducer output a binary string $c$ such that $c^R \equiv a^R + b^R \pmod{2^n}$. Equivalently, $c^R = (a^R + b^R)\text{ \% }2^n$, or consider this addition on n-bit unsigned integers with no handling of overflow - pick your favorite way to ground this!
+    \end{parts}
+\end{questions}
+
+\end{document}
+
