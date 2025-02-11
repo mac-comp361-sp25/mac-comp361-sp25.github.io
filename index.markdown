@@ -20,6 +20,7 @@ Be aware of [known typos](https://math.mit.edu/~sipser/itoc-errs3.1.html) in the
 
 #### Office Hours
 MON 4:30-6pm \\
+THU 4:30-5:30pm \\
 FRI 4:30-5:30pm \\
 OLRI 229
 
