@@ -89,3 +89,10 @@ Bolded questions will be graded for correctness and clarity. I recommend struggl
 **Template**: [LaTeX]({{site.url}}/hws/HW2.tex)
 
 **Notes:** Be aware that while 2b is not graded, a reasonable solution to 2b is necessary to get full points on 2c, so it is ungraded but effectively mandatory.
+
+#### Homework 3
+
+**OUT:** Feb 19th
+**DUE:** 11:59pm Feb 26th \\
+[**Instructions**]({{site.url}}/hws/HW3.pdf)
+**Template**: [LaTeX]({{site.url}}/hws/HW3.tex)
