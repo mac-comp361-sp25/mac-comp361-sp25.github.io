@@ -41,7 +41,7 @@ The schedule below will be updated to keep track of all released course material
 | 3 | TU 2/11 | NFAs  | Sipser 1.2  |  |
 | 3 | TH 2/13 | Closure Properties of Regular Languages 2  |  |  |
 | 4 | TU 2/18 | RegExp  | Sipser 1.3  |  |
-| 4 | TH 2/20 | Proving Non-Regularity (Pumping Lemma) | Sipser 1.4  |  |
+| 4 | TH 2/20 | Proving Non-Regularity (Pumping Lemma) | Sipser 1.4  | [Puzzle Problem](pages/PumpingLemmaPuzzle)  |
 | 5 | TU 2/25 | Pumping Lemma 2  |  |  |
 | 5 | TH 2/27 | No Class: Capstones! |  |  |
 | 6 | TU 3/4 | CFGs  | Sipser 2.1  |  |
