@@ -1,0 +1,132 @@
+\documentclass{exam}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{geometry}[border=1in]
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,automata,positioning}
+
+\newtheorem*{statement}{Statement}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Def}
+
+\title{HW4 - Pumping Lemma + Myhill Nerode}
+\author{COMP361 --- Suhas Arehalli}
+\date{Spring 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Instructions}
+As with previous homeworks, 
+
+\begin{itemize}
+    \item Deadlines are posted on the course website.
+    \item Solutions should be turned in as a typeset pdf, preferably using LaTeX. I recommend a tool like Overleaf. 
+    \item Assignments are individual, and you should not share solutions with other students. However, you are free to discuss problems within the bounds of the academic integrity policy in the syllabus, and should indicate in your assignment the people you got assistance from (including instructors, peers, and preceptors!). 
+    \item Proofread your work before submission, and consult the proof style guide to make sure your submissions are both correct and clear.
+    \item Graded problems will be indicated by an asterisk (*) next to the problem number. You are still expected to solve all of the problems.
+\end{itemize}
+
+\section*{Questions}
+\begin{questions}
+    \question \textit{(Based on Sipser 1.48)}. \textbf{Myhill-Nerode Theorem}. Before completing this problem, it may be helpful to review some of the discussion of the terminology that leads up to this theorem that we saw in class. Since we didn't follow Sipser's presentation exactly, I've summarized our discussion in the Review section at the end of the document. Also note that once this problem is complete, you may use the Myhill-Nerode theorem freely on homeworks/exams to prove regularity or non-regularity. 
+    \begin{parts}
+        \part *Prove that if $L$ is recognized by a DFA with $k$ states, the index of $L$ must be $\leq k$.
+
+        \textit{**HINT**: This proof will have similar structure to that of the Pumping Lemma. Proceed by contradiction, and maybe consider problem 2 from the prior homework!}
+        
+        \part *Prove that if $L$ has finite index $k$, then $L$ is recognized by a DFA with exactly $k$ states.
+
+        \textit{**HINT**: Construct the DFA. You don't need to formally show that it recognizes $L$ via an inductive argument, but make sure it is clear why the DFA you constructed should recognize $L$}
+
+        \part Conclude that a language $L$ is regular iff $L$ has a finite index. 
+
+        \part Conclude that the index of a language $L$ is the number of states in the minimal DFA that recognizes it.
+    \end{parts}
+
+    \question Prove, via the following steps, that $L = \{0^n1^n \mid n \geq 0\}$ is non-regular using the Myhill-Nerode Theorem. 
+    \begin{parts}
+        \part Consider $\equiv_L$ for the given $L$. Determine if the following strings are indistinguishable or distinguishable by $L$. Provide a distinguishing extension $z$ if they are distinguishable.
+        \begin{parts}
+            \part $0^5$ and $0^6$
+            \part $0^5$ and $0^61$
+            \part $0^61$ and $0^71^2$
+        \end{parts}
+        \part Provide an infinite set that is pairwise distinguishable by $L$. As a bonus, see if you can characterize the full set of equivalence classes of $\equiv_L$, though that is not necessary here (be sure you're confident why)!
+        \part Conclude via Myhill-Nerode and your previous answer that $L$ is non-regular.
+    \end{parts}
+
+    \question Consider the language $L = \{\texttt{a}^n\texttt{>a}^m \mid n > m \}$ with alphabet $\Sigma =\{\texttt{a}, \texttt{>}\}$. For example, \texttt{aaaa>a}$\in L$, but \texttt{a>aa}$\notin L$
+    \begin{parts}
+        \part *Prove that $L$ is non-regular via the Pumping Lemma.
+        \part *Prove that $L$ is non-regular via the Myhill-Nerode Theorem
+    \end{parts}
+
+    \question Consider the Language $L = \{w \in \{0,1\}^* \mid \text{$w$ is divisible by 3}\}$
+    \begin{parts}
+        \part Familiarize yourself (or refamiliarize yourself) with binary representations of non-negative integers. 
+        \part Work from small strings to construct equivalence classes under $\equiv_L$. How many equivalence classes are there? Prove via induction that every string $w \in \Sigma^*$ is Nerode-equivalent to one of the classes you construct.
+        \part Construct the smallest DFA that recognizes $L$ using Myhill-Nerode. 
+    \end{parts}
+
+\end{questions}
+\newpage
+\section*{Review}
+Before beginning the following problems, it may be helpful to review the following facts from Discrete Math and prior lectures. Feel free to skim or skip this section if you're confident, but you do so at your own peril.
+
+An \textbf{Equivalence Relation} is a relation that is symmetric, reflexive, and transitive (review Chapter 0 if this terminology is unfamiliar!). In class, we constructed an equivalence relation in the following steps
+
+\begin{definition}
+    For a language $L$ and strings $x,y \in \Sigma^*$, $x$ and $y$ are \textbf{distinguishable by $L$} iff there exists some string $z \in \Sigma^*$ such that $xz \in L$ but $yz \notin L$ or $yz \in L$ but $xz \notin L$. We call that $z$ a \textbf{distinguishing extension}.
+
+    Thus, $x$ and $y$ are \textbf{indistinguishable by $L$} iff $\forall z \in \Sigma^*$, $xz \in L$ iff $yz \in L$.
+\end{definition}
+
+\begin{definition}
+    $x$ is \textbf{Nerode-congruent} to $y$ (notated $x \equiv_L y$) iff $x$ and $y$ are indistinguishable by $L$.
+\end{definition}
+
+In class, we argued that $\equiv_L$ is an equivalence relation! 
+
+In Discrete, you likely saw that we can use equivalence relations to partition a set into \textbf{Equivalence Classes} --- sets of elements that are equivalent to each other. Formally, we can look at the equivalence class that any string $w \in \Sigma^*$ belongs to under $\equiv_L$ by constructing
+
+\begin{align*}
+    C_w = \{x \in \Sigma^* \mid  x \equiv_L y \}
+\end{align*}
+
+That is, the equivalence class containing $w$ contains every string indistinguishable from $w$ by L.
+
+A common question we ask about equivalence classes is how many there are under a particular equivalence relation. We also try to describe what properties elements in these classes share. 
+
+For instance, we can consider the parity relation: for $x,y \in \mathbb{Z}$, $x \equiv_{parity} y$ iff $x = y \mod{2}$ (or, $x$ and $y$ share the same parity). We can see that every pair of even numbers is equivalent to each other, and every pair of odd numbers is equivalent to each other, and no pair of even and odd numbers is equivalent. Thus, we have 2 equivalence classes: $C_{odd} = \{x \in \mathbb{Z} \mid \text{$x$ is odd}\}$ and $C_{even} = \{x \in \mathbb{Z} \mid \text{$x$ is even}\}$.
+
+Moving to Nerode-equivalence, we saw in class that we can construct equivalence classes over $\Sigma^*$ once we have a language $L$. Let's consider 
+\begin{align*}
+    L = \{ w \in \Sigma^* \mid \text{$\lvert w \rvert$ is even}\}.
+\end{align*}
+We then argued that every even length string is indistinguishable by $L$ from every other even length string, and that the same went for odd strings (in short - for fixed $z$, can $x$, $y$ with the same length-parity have $xz$, $yz$ with different length parity? No). However, even and odd length strings were, in fact, distinguishable ($xz$ and $yz$ will have different parity for every $z$!)! Thus we also had 2 equivalence classes, $C_{even} = \{w \in \Sigma^* \mid \text{$\lvert w \rvert$ is even}\}$ and $C_{odd} = \{w \in \Sigma^* \mid \text{$\lvert w \rvert$ is odd}\}$.
+
+We then continued by defining a few more helpful terms, drawing from Sipser 1.47:
+
+\begin{definition}
+    Given a set $X \subseteq \Sigma^*$ and a language $L$, $X$ is \textbf{Pairwise Distinguishable by $L$} iff for any $x,y \in X$ such that $x \neq y$, $x$ and $y$ are distinguishable by $L$.
+\end{definition}
+
+\begin{definition}
+    The \textbf{index} of a language $L$ is the size of the largest set $X \subseteq \Sigma^*$ that is still pairwise distinguishable by $L$. Note that such a finite index might not exist if $X$ is not finite.
+\end{definition}
+
+Note that, once we've developed a notion of equivalence classes, we can think of a pairwise distinguishable $X$ as drawing elements from different equivalence classes under $\equiv_L$, and the index as the number of equivalence classes under $\equiv_L$. 
+
+These set us up to prove the Myhill-Nerode Theorem in Problem 1.
+\end{document}
