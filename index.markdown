@@ -48,6 +48,20 @@ The schedule below will be updated to keep track of all released course material
 | 6 | TH 3/6 | PDAs and Pumping lemma for CFLs  | Sipser 2.2--2.3  |  |
 | 7 | TU 3/11 | CFGs/PDA Equivalence  | Sipser 2.2  |  |
 | 7 | TH 3/13 | **Exam 1**  |  |  |
+| 8 | - | **Spring Break**  |  |  |
+| 9 | TU 3/25 | Turing Machines 1 | Sipser 3.1 |  |
+| 9 | TH 3/27 | Turing Machines 2 | Sipser 3.2 |  |
+| 10 | TU 4/1 | Algorithms & Church-Turing Thesis | Sipser 3.3 |  |
+| 10 | TH 4/3 | Decidability | Sipser 4.1 | |
+| 11 | TU 4/8 | Undecidability & Halting Problem | Sipser 4.2 |  |
+| 11 | TH 4/10 | Reductions to Undecidability | Sipser 5.1/5.3 |  |
+| 12 | TU 4/15 | **Exam 2** |  |  |
+| 12 | TH 4/17 | Complexity Theory | Sipser 7.1 |  |
+| 13 | TU 4/22 | P vs. NP | Sipser 7.2--7.3 |  |
+| 13 | TH 4/24 | NP-Completeness & Cook-Levin | Sipser 7.4 |  |
+| 14 | TU 4/29 | TBD | |  |
+| 14 | TH 5/1 | TBD | |  |
+| FINALS | SA 5/10 10:30-12:30pm | **FINAL EXAM** | |  |
 
 </div> 
 
