@@ -117,3 +117,10 @@ Bolded questions will be graded for correctness and clarity. I recommend struggl
 **DUE:** 11:59pm March 10th \\
 [**Instructions**]({{site.url}}/hws/HW4.pdf)
 **Template**: [LaTeX]({{site.url}}/hws/HW4.tex)
+
+#### Homework 5
+
+**OUT:**: April 1st
+**DUE:** 11:59pm April 8th \\
+[**Instructions**]({{site.url}}/hws/HW5.pdf)
+**Template**: [LaTeX]({{site.url}}/hws/HW5.tex)
