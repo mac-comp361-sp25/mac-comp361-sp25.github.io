@@ -124,3 +124,9 @@ Bolded questions will be graded for correctness and clarity. I recommend struggl
 **DUE:** 11:59pm April 8th \\
 [**Instructions**]({{site.url}}/hws/HW5.pdf)
 **Template**: [LaTeX]({{site.url}}/hws/HW5.tex)
+
+#### Homework 6
+**This assignment contains no graded problems**
+**OUT:**: April 10th \\
+[**Instructions**]({{site.url}}/hws/HW6.pdf)
+**Template**: [LaTeX]({{site.url}}/hws/HW6.tex)

@@ -1,0 +1,78 @@
+\documentclass{exam}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{geometry}[border=1in]
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,automata,positioning}
+
+\newtheorem*{statement}{Statement}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Def}
+
+\title{HW6? - Reductions and (un-)Decidability}
+\author{COMP361 --- Suhas Arehalli}
+\date{Spring 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Instructions}
+Note that unlike other assignments, there are \textbf{no graded problems} on this assignment. Think of it as a set of practice problems to guide your preparation for the next exam. These are organized by topic, covering the relevant topics we haven't seen a HW problem on.
+
+My advice is to know the relevant proof strategies, here suggested through the \textit{**HINT**}s. Though many of these are most quickly solved using the language of mapping reducibility, that content is considered optional for this unit, and every problem is solvable by an explicit reduction. For instance, proving undecidability is entirely possible through proof by contradiction: assume the language is decidable and show you can build a decider for a language we already know is undecidable, a contradiction. 
+
+\section*{Questions}
+
+\subsection*{Decidability}
+\begin{questions}
+    \question \textit{(Based on Sipser 4.14)} Let $C = \{\langle G, x \rangle \mid G \text{ is a CFG and } x \text{ is a substring of } y \in L(G) \}$. Prove that $C$ is decidable using a reduction to $E_{CFG}$.
+
+    \textit{**HINT**: Recall from your Exam 1 that the intersection of a CFL and a Regular Language is Context-Free.}
+\end{questions}
+
+\subsection*{Undecidability}
+\begin{questions}
+    \question \textit{(Based on Sipser 5.30)} Consider the language 
+    \begin{align*}
+    LEFT_{TM} = \{ \langle M, w \rangle \mid M \text{ attempts to move left from the leftmost cell when run on } w\}.
+    \end{align*}
+    Prove $LEFT_{TM}$ is undecidable.
+
+    \textit{**HINT**: Construct a machine $M'$ such that $\langle M', w \rangle \in LEFT_{TM}$ iff $M$ accepts $w$.} 
+
+    \question \textit{(Based on Sipser 5.29)} A useless state in a TM is a state that is never visited during the computation history corresponding to any input $w$. Let 
+    \begin{align*}
+        USELESS_{TM} = \{\langle M, q \rangle \mid M \text{ is a TM, and } q \text{ is a useless state of } M\}
+    \end{align*} 
+    Prove $USELESS_{TM}$ is undecidable.
+
+    \textit{**HINT**: Recall that $E_{TM}$ is undecidable. Consider the relationship between $USELESS_{TM}$ and $E_{TM}$.}
+
+    \question Prove that $EQ_{CFG}$ is undecidable by...
+    \begin{parts}
+        \part ...a reduction using $ALL_{CFG}$.
+        \part ...a reduction using computation histories. 
+        
+        \textit{**HINT**: Revisit the proof for $ALL_{CFG}$ and attempt to modify it to use $EQ_{CFG}$ instead of $ALL_CFG$. This shouldn't be a large modification, since a decider for $ALL_{CFG}$ would be a special case of $EQ_{CFG}$.}
+    \end{parts}
+\end{questions}
+
+\subsection*{(non-)RE-ness}
+\begin{questions}
+    \question \textit{(Based on Sipser 4.12)} Consider a Recursively Enumerable (RE) language $A = \{\langle M_1 \rangle, \langle M_2 \rangle, \dots \}$ where each $M_i$ is a decider. Prove that there exists a decidable language $D$ such that no $M_i \in A$ decides $D$ (i.e., $\forall M_i \in A$, $L(M_i) \neq D)$. Conclude that $B = \{\langle M \rangle \mid M \text{ is a decider}\}$ is not RE. 
+
+    \textit{**HINT**: Sipser claims thinking about an Enumerator of $A$ is helpful (which must exist, since $A$ is RE. I personally don't find it necessary, or particularly helpful, but your mileage may vary!}
+\end{questions}
+
+
+\end{document}
