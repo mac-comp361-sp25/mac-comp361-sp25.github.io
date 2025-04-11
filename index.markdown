@@ -126,7 +126,7 @@ Bolded questions will be graded for correctness and clarity. I recommend struggl
 **Template**: [LaTeX]({{site.url}}/hws/HW5.tex)
 
 #### Homework 6
-**This assignment contains no graded problems**
+**This assignment contains no graded problems** \\
 **OUT:**: April 10th \\
 [**Instructions**]({{site.url}}/hws/HW6.pdf)
 **Template**: [LaTeX]({{site.url}}/hws/HW6.tex)
