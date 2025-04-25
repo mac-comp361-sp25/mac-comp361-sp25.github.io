@@ -59,8 +59,8 @@ The schedule below will be updated to keep track of all released course material
 | 12 | TH 4/17 | Complexity Theory | Sipser 7.1 |  |
 | 13 | TU 4/22 | P vs. NP | Sipser 7.2--7.3 |  |
 | 13 | TH 4/24 | NP-Completeness & Cook-Levin | Sipser 7.4 |  |
-| 14 | TU 4/29 | TBD | |  |
-| 14 | TH 5/1 | TBD | |  |
+| 14 | TU 4/29 | Reduction Practice | |  |
+| 14 | TH 5/1  | Special Topic: Circuit Complexity | Sipser 9.3 |  |
 | FINALS | SA 5/10 10:30-12:30pm | **FINAL EXAM** | |  |
 
 </div> 
@@ -73,7 +73,13 @@ Note that while you are expected to complete *all* homework problems, some assig
 
 #### Homework 0
 
-Sipser Problems: 0.4 ($AxB$), 0.5 (size of the power set of $A$), 0.11 ($C(n) = \sum^n i^3$), **0.12** (All horses are the same color), **0.13** (Every graph w/ 2+ nodes has 2 nodes with equal degree), 0.14 (Ramsey's Thm.)
+Sipser Problems: 
+    - 0.4 ($AxB$), 
+    - 0.5 (size of the power set of $A$), 
+    - 0.11 ($C(n) = \sum^n i^3$), 
+    - **0.12** (All horses are the same color), 
+    - **0.13** (Every graph w/ $\geq2$ nodes has 2 nodes with equal degree), 
+    - 0.14 (Ramsey's Thm.)
 
 Bolded questions will be graded for correctness and clarity. I recommend struggling with 0.14 for at least a day or two before consulting the provided solution. 
 
