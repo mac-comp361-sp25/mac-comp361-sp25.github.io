@@ -1,0 +1,112 @@
+\documentclass{exam}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{geometry}[border=1in]
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,automata,positioning}
+
+\newtheorem*{statement}{Statement}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Def}
+
+\title{HW7 - Complexity Theory and P vs. NP}
+\author{COMP361 --- Suhas Arehalli}
+\date{Spring 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Instructions}
+Note that unlike other assignments, there are \textbf{no graded problems} on this assignment. Think of it as a set of practice problems to guide your preparation for the next exam. These are organized by topic, covering the relevant topics we haven't seen a HW problem on.
+
+To prove that...
+\begin{itemize}
+    \item ...a language $L \in P$, provide a polynomial time TM that decides $L$
+    \item ...a language $L \in NP$, provide a polynomial-time verifier or polynomial-time Nondeterministic Turing Machine (NTM).
+    \item ...a language $L$ is NP-COMPLETE, show $L \in NP$ and provide a reduction from $SAT$/$3SAT$ (or other known NP-COMPLETE problem) to $L$. 
+\end{itemize}
+\section*{Questions}
+
+\begin{questions}
+    \question \textit{(Sipser 7.9)} Consider 
+    \begin{align*}
+        TRIANGLE = \{\langle G \rangle \mid G \text{ contains a 3-CLIQUE }\}
+    \end{align*}
+
+    Show that $TRIANGLE \in P$. 
+
+    \question \textit{(Sipser 7.23)} Consider a CNF formula $\phi$ with $m$ variables and $c$ clauses. Show that you can construct, in polynomial time,  an NFA with $O(cm)$ states that accepts all non-satisfying assignments to $\phi$, represented as a boolean string of length $m$. Conclude that $P \neq NP$ implies that NFAs cannot be minimized in polynomial time. 
+
+    \question \textit{(Sipser 7.34)} Let 
+
+    \begin{align*}
+        U = \{\langle M, x, \#^t \rangle \mid \text{NTM $M$ accepts $x$ within $t$ steps on some branch} \}
+    \end{align*}
+    Show that $U$ is NP-Complete.  
+
+    \question A $k$-coloring of a graph is an assignment of one of $k$ colors to each vertex such that no edge connects two vertices of the same color. Consider
+
+    \begin{align*}
+        3COLOR = \{\langle G \rangle \mid G \text{ is 3-colorable} \}.
+    \end{align*}
+
+    Prove that $3COLOR$ is NP-COMPLETE via a reduction. To do this, consider the gadgets in Fig. \ref{fig:TFGadget} and \ref{fig:ORGadget} and piece them together to construct a graph that is 3-colorable iff a boolean formula is satisfiable. 
+
+    \begin{figure}
+        \centering
+        \tikz{
+        \begin{scope}[every node/.style={circle,thick,draw,minimum size=20pt}]
+        \node (t) at (0,0) {T};
+        \node (f) at (0,1) {F};
+        \node[fill=gray] (b) at (1,0.5) {};
+
+        \node (x) at (3, 1) {$x$};
+        \node (xbar) at (3, 0) {$\overline{x}$};
+        \end{scope}
+
+        \path[-](t) edge (f);
+        \path[-](f) edge (b);
+        \path[-](b) edge (t);
+        \path[-](x) edge (xbar);
+        \path[-](x) edge (b);
+        \path[-](xbar) edge (b);
+        } 
+        \caption{A gadget that enforcing an assignment of colors for true and false to a variable $x$ and it's complement $\overline{x}$. Note that Sipser calls the triangle/3-clique on the left a \textit{palette} to indicate that it captures our 3 distinct colors: T, F, and \textcolor{gray}{$\blacksquare$}}.
+        \label{fig:TFGadget}
+    \end{figure}
+
+    \begin{figure}
+        \centering
+        \tikz{
+        \begin{scope}[every node/.style={circle,thick,draw,minimum size=20pt}]
+        \node (a) at (0,1) {};
+        \node (b) at (1,1) {};
+        \node (out) at (0.5,2) {$o$};
+
+        \node (x) at (0, 0) {$l_1$};
+        \node (y) at (1, 0) {$l_2$};
+        \end{scope}
+
+        \path[-](a) edge (b);
+        \path[-](b) edge (out);
+        \path[-](out) edge (a);
+        \path[-](x) edge (a);
+        \path[-](y) edge (b);
+        } 
+        \caption{A gadget that only allows vertex $o$ to be colored true iff at least one of $l_1$ and $l_2$ is colored true.}
+        \label{fig:ORGadget}
+    \end{figure}
+
+    \question \textit{(Sipser 7.45)} Show that if $P = NP$, then every language $A \in P$, other than $A=\emptyset$ or $A = \Sigma^*$, is NP-COMPLETE.
+\end{questions}
+\end{document}
